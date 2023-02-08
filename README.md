@@ -1,12 +1,12 @@
 # Tic Tac Toe Game
 
 ## Board
-'''bash
+```bash
 dadsa dasdadasd
-'''
+```
 
 
-'''python
+```python
 
 def board_show():
     print(' ' + board[0] + ' | ' + board[1] + ' | ' + board[2])
@@ -14,7 +14,7 @@ def board_show():
     print(' ' + board[3] + ' | ' + board[4] + ' | ' + board[5])
     print('---|---|---')
     print(' ' + board[6] + ' | ' + board[7] + ' | ' + board[8])
-'''
+```
 Tic Tac  Toe game
 
 
