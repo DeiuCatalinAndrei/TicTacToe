@@ -31,7 +31,7 @@ board_show()
 
 while not gameover:
     try:
-        move = int(input(f'In which box do you want to move player {player} (1-9)'))
+        move = int(input(f'In which box do you want to move player {player} (1-9) '))
         if board[move-1] == ' ':
             board[move-1] = player
             board_show()
