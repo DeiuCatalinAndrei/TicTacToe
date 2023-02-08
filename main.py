@@ -5,8 +5,6 @@ def board_show():
     print('---|---|---')
     print(' ' + board[6] + ' | ' + board[7] + ' | ' + board[8])
 
-
-
 def check_draw():
     if not ' ' in board:
         return True
@@ -24,10 +22,8 @@ def check_win(board, player):
        (board[2] == player and board[4] == player and board[6] == player):
         return True
     else:
-        
         return False
-
-
+    
 player = "X"
 board = [' '] * 9
 gameover = False
@@ -35,25 +31,23 @@ board_show()
 
 while not gameover:
     try:
-        move = int(input(f'In ce casuta doresti sa muti playerule {player} (1-9)'))
+        move = int(input(f'In which box do you want to move player {player} (1-9)'))
         if board[move-1] == ' ':
             board[move-1] = player
             board_show()
             if check_win(board, player):
                 gameover = True
-                print(f'Playerul {player} a castigat partida')
+                print(f'Player {player} won the game')
                 
             if check_draw() and not gameover:
                 gameover = True
-                print('Partida este remiza')
+                print('The game is a draw')
                 
             if player == "X":
                 player = "0"
             else:
                 player = "X"
         else:
-            print("Aceasta casuta este ocupata")
+            print("This box is occupied")
     except:
-        print('Numarul introdus nu este corect')
-        
-
+        print('The number entered is not correct')
